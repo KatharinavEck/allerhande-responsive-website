@@ -1,70 +1,72 @@
 
-
-/* [LAPTOP SCHERM] */
-/* HAMBURGER ICON */
-#page-nav label {
-  color: #000;
-  background: #fff;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#page-nav label, #hamburger {
-  /* Hide the hamburger icon */
-  display: none;
-}
-/* NAVIGATIE BAR */
-#page-nav {
-  background: #fff;
-}
-#page-nav-ul {
-  display: flex;
-  flex-direction: row;
-}
-#page-nav-ul li {
-  color: #000;
-  padding: 20px;
-  font-size: 22px;
-  text-decoration: none;
-  text-align: center;
-  flex-grow: 1;
-  flex-basis: 0;
-  list-style: none;
-}
-/* Grijze hover */
-#page-nav-ul li:hover {
-  color: #d3d3d3;
-}
-
-nav li:firstchild {
-  margin-right:auto;
-  }
-
-#logo {
-  width: 10%;
-}
-
-/* [Klenine scherm] */
-@media only screen and (max-width: 600px) {
-  /* Hamburger menu */
-  #page-nav label {
-    display: inline-block;
-  }
-  /* Collapse menu */
-  #page-nav-ul {
-    flex-direction: column;
-  }
-  /* Show/hide menu on checkbox click */
-  #page-nav-ul {
-    display: none;
-  }
-  #page-nav input:checked ~ #page-nav {
-    display: flex;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html, body {
   font-family: 'Open Sans', sans-serif;
+}
+/* Mobile first, de mediaquerie voor de telefoon met een min width van 30em */
+/* @media (min-width: 30em); */
 
+
+/* hier geef ik per h aan welke fonts/kleuren ze precies hebben */
+h1 {
+  font-family: greycliffCF-Heavy,Sans-serif;
+  color: #6cbc88;
+    text-align: center;
+}
+h2 {
+  font-family: greycliffCF-Regular,Sans-serif;
+  color:black;
+}
+h3 {
+  font-family: greycliffCF-Bold,Sans-serif;
+  color: black;
+}
+
+
+/* hier edit ik de header */
+
+.navbar {
+  border-right: 1px solid #f4f4f4;
+  padding-bottom: 10px;
+}
+
+/* Geen bulletpoints of decoratie */
+.main-nav {
+  list-style-type: none;
+}
+.nav-links  .logo {
+  text-decoration: none;
+}
+
+/* hier edit ik de plaatsing van het menu */
+.main-nav li {
+  margin: 15px auto;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer; 
+  color: rgba(255,255,255,0.8);
+  font-size: 24px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.active {
+  display: block;
 }
