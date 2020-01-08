@@ -1,31 +1,99 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
   <head>
     <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <nav id="page-nav">
-      <label for="hamburger">&#9776;</label>
-      <input type="checkbox" id="hamburger"/>
-      <ul id="page-nav-ul">
-        <li href="#"><img src="logo.png" alt="Albert Heijn logo"></li>
-        <li href="#">
-          Producten
-        </li>
-        <li href="#">
-          Bonus
-        </li>
-        <li href="#">
-          Allerhande Box
-        </li>
-        <li href="#">
-          Recepten
-        </li>
-        <li href="#">
-          Winkels
-        </li>
-      </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+      <img class="logo" src="logo.png" alt="Albert Heijn logo">
+            <ul class="main-nav" id="js-menu">
+      
+              <li class="nav-links" href="#">
+                Producten
+              </li>
+              <li class="nav-links" href="#">
+                Bonus
+              </li>
+              <li class="nav-links" href="#">
+                Allerhande Box
+              </li>
+              <li class="nav-links" href="#">
+                Recepten
+              </li>
+              <li class="nav-links" href="#">
+                Winkels
+              </li>
+            </ul>
+            </nav>
+         
+        <input type="text" placeholder="Zoeken">
+        <a href="#">Winkelwagen</a>
+
+        <img src="allerhande-logo-zwart.svg" alt="allerhande logo">
+        <ul id="overzicht-nav">
+        
+            <li href="#">
+              Recepten
+            </li>
+            <li href="#">
+              Thema's
+            </li>
+            <li href="#">
+              Kids
+            </li>
+            <li href="#">
+              Video's
+            </li>
+            <li href="#">
+              Mijn recepten
+            </li>
+            <li href="#">
+              Kookschrift
+              </li>
+          </ul>
+
+        </header>
+<img src="banner.jpg" alt="Banner">
+<img src="allerhande-logo-goud.png" alt="allerhande logo in goudkleuren">
+
+
+  <main>
+<h1>Het kerstdiner</h1>
+<h2>De populairste gerechten voor Kerst</h2>
+<article>
+<img src="ovenfrittata.jpg" alt="Ovenfrittat met wintergroente">
+<h3>Ovenfrittat met wintergroente</h3>
+</article>  
+
+<article>
+  <img src="rodekool.jpg" alt="Gegrilde rode kool">
+  <h3>Kalkoen met appel-salie-pecannotenvulling</h3>
+</article>  
+
+  </main>
+
+  <h1>Lekker voor vandaag:</h1>
+  <h2>Ovenschotel!</h2>
+  <article>
+    <img src="mac-lasagna.jpg" alt="Ma­ca­ro­ni-broc­co­li­scho­tel uit de oven">
+    <h3>Ma­ca­ro­ni-broc­co­li­scho­tel uit de oven</h3>
+  </article>  
+  <article>
+    <img src="spinazie-lasagna.jpg" alt="Mak­ke­lij­ke la­sag­ne met spi­na­zie">
+    <h3>Mak­ke­lij­ke la­sag­ne met spi­na­zie</h3>
+  </article>  
+  <article>
+    <img src="bonen-lasagna.jpg" alt="Oven­scho­tel met au­ber­gi­ne en wit­te bo­nen">
+    <h3>Oven­scho­tel met au­ber­gi­ne en wit­te bo­nen</h3>
+  </article>  
   </body>
 </html>
