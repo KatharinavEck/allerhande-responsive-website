@@ -6,25 +6,38 @@
 }
 
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
 }
-/* Mobile first, de mediaquerie voor de telefoon met een min width van 30em */
-/* @media (min-width: 30em); */
+
+
 
 
 /* hier geef ik per h aan welke fonts/kleuren ze precies hebben */
 h1 {
-  font-family: greycliffCF-Heavy,Sans-serif;
+  font-size: 28px;
+  font-family: 'Public Sans',Sans-serif;
+  font-weight: 700;
   color: #6cbc88;
   text-align: center;
+  margin: 5%;
 }
 h2 {
-  font-family: greycliffCF-Regular,Sans-serif;
+  font-size: 20px;
+  font-family: 'Public Sans',Sans-serif;
+  font-weight: 500;
   color:black;
+  margin: 5% 5%;
+  float: center;
+  margin: 2% 5% 2% 5%;
 }
 h3 {
-  font-family: greycliffCF-Bold,Sans-serif;
+  font-size: 14px;
+  font-family: 'Public Sans',Sans-serif;
+  font-weight: 400;
   color: black;
+  margin: 5% 5%;
+  float: center;
+  margin: 0 5% 0 5%;
 }
 
 
@@ -33,6 +46,9 @@ h3 {
 .navbar {
   border-right: 1px solid #f4f4f4;
   padding-bottom: 10px;
+  border-bottom: 1px solid #f4f4f4;
+  display: grid;
+
 }
 
 /* Geen bulletpoints of decoratie */
@@ -47,21 +63,23 @@ h3 {
 .main-nav li {
   margin: 15px auto;
 }
-
+/* de plaatsing van het logo */
 .logo {
-  display: block;
-  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 5px;
 }
 
 .navbar-toggle {
   position: absolute;
   top: 10px;
-  right: 20px;
+  left: 15px;
   cursor: pointer; 
   color: rgba(255,255,255,0.8);
   font-size: 24px;
+  text-align: left;
 }
-
+/* navigatie geen bulletpoints */
 .main-nav {
   list-style-type: none;
   display: none;
@@ -69,4 +87,146 @@ h3 {
 
 .active {
   display: block;
+}
+
+.dropdown-content {
+  list-style-type: none;
+}
+/* Navbar container kleur en font */
+.dropdownnav {
+  overflow: hidden;
+  background-color:#f0efea;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropbtn {
+  float: right;
+  border: none;
+  outline: none;
+  color: #303030;
+  padding: 14px 16px;
+  text-align: center;
+  background-color: inherit;
+  font-family: inherit;
+  margin-right: 5%; 
+
+}
+
+
+/* Dropdown content, hier geef ik het een styling en zet ik het met grid in 2 collumnen.  */
+.dropdown-content {
+  display: none;
+  position: relative;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-decoration: none;
+  grid-template-columns: 50vw 50vw;
+
+}
+
+.dropdown-content li {
+  font-family: 'Public Sans' ,Sans-serif ;
+  font-size: 14px;
+  margin: 0;
+  background-color:#f0efea;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  padding: 10%;
+}
+
+/* Hiermee laat hij de overview dropdown zien met hover */
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
+
+#allerhandelogoklein {
+  width: 50%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+/* hier ga ik de banner image editten */
+
+.bannerimage {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+#allerhandelogobanner {
+  width: 80%;
+  z-index: 5;
+  position: absolute;
+  margin: 5% 10% 5% 10%;
+}
+
+/* alle artikel images mogen er hetzelfde uitzien */
+
+article img {
+  width: 90%;
+  margin: 5% 5% 0 5%;
+  float: center;
+}
+/* Mobile first, de mediaquerie voor groter dan telefoon */
+@media (min-width: 30em) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+}
+.main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.navbar-toggle {
+  display: none;
+
+}
+.logo {
+  float: left;
+  margin: 5%;
+}
+
+/* #overzicht-p {
+  display: none;
+}  */
+/* .dropdown-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown {
+  display: flex;
+  margin-right: 30px;
+  flex-direction: row;
+  justify-content: flex-end;
+} */
+
+/* Deze divjes heb ik gemaakt zodat de articles in een grid kan zetten, als ik alleen de articles hier adress zet 
+hij ook de text in een column ipv eronder */
+.article-responsive{
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  width: 25%;
+}
+
+}
 }

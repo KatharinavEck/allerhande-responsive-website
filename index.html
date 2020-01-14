@@ -3,17 +3,16 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
         <nav class="navbar">
-            
             <span class="navbar-toggle" id="js-navbar-toggle">
-                <i class="fas fa-bars"></i>
+                <img src="try.png" alt="">
             </span>
+          
       <img class="logo" src="logo.png" alt="Albert Heijn logo">
             <ul class="main-nav" id="js-menu">
       
@@ -35,43 +34,57 @@
             </ul>
             </nav>
          
-        <input type="text" placeholder="Zoeken">
-        <a href="#">Winkelwagen</a>
+        <!-- <input type="text" placeholder="Zoeken">
+        <i class="fa fa-search"></i>
 
-        <img src="allerhande-logo-zwart.svg" alt="allerhande logo">
-        <ul id="overzicht-nav">
+        <a href="#">Winkelwagen</a
+          > -->
+        <div class="dropdownnav">
+          <div class="dropdown">
+              <img id="allerhandelogoklein" src="allerhande-logo-zwart.svg" alt="allerhande logo">
+
+            <button class="dropbtn"> <p id="overzicht-p">overzicht</p>
+              <i class="fa fa-caret-down"></i>
+            </button>
+              <ul class="dropdown-content" id="overzicht-nav">
         
-            <li href="#">
-              Recepten
-            </li>
-            <li href="#">
-              Thema's
-            </li>
-            <li href="#">
-              Kids
-            </li>
-            <li href="#">
-              Video's
-            </li>
-            <li href="#">
-              Mijn recepten
-            </li>
-            <li href="#">
-              Kookschrift
-              </li>
-          </ul>
+                <li href="#">
+                  Recepten
+                </li>
+                <li href="#">
+                  Thema's
+                </li>
+                <li href="#">
+                  Kids
+                </li>
+                <li href="#">
+                  Video's
+                </li>
+                <li href="#">
+                  Mijn recepten
+                </li>
+                <li href="#">
+                  Kookschrift
+                  </li>
+              </ul>
+          </div>
+        </div>
+
+        
 
         </header>
-<img src="banner.jpg" alt="Banner">
-<img src="allerhande-logo-goud.png" alt="allerhande logo in goudkleuren">
-
+        
+<img src="allerhande-logo-goud.png" alt="allerhande logo in goudkleuren" id="allerhandelogobanner">
+<img src="banner.jpg" alt="Banner" class="bannerimage">
 
   <main>
 <h1>Het kerstdiner</h1>
 <h2>De populairste gerechten voor Kerst</h2>
+
+<div class="article-responsive">
 <article>
 <img src="ovenfrittata.jpg" alt="Ovenfrittat met wintergroente">
-<h3>Ovenfrittat met wintergroente</h3>
+<h3>Ovenfrittata met wintergroente</h3>
 </article>  
 
 <article>
@@ -79,10 +92,12 @@
   <h3>Kalkoen met appel-salie-pecannotenvulling</h3>
 </article>  
 
-  </main>
+</div>
 
   <h1>Lekker voor vandaag:</h1>
   <h2>Ovenschotel!</h2>
+
+<div class="article-responsive">
   <article>
     <img src="mac-lasagna.jpg" alt="Ma­ca­ro­ni-broc­co­li­scho­tel uit de oven">
     <h3>Ma­ca­ro­ni-broc­co­li­scho­tel uit de oven</h3>
@@ -95,5 +110,9 @@
     <img src="bonen-lasagna.jpg" alt="Oven­scho­tel met au­ber­gi­ne en wit­te bo­nen">
     <h3>Oven­scho­tel met au­ber­gi­ne en wit­te bo­nen</h3>
   </article>  
+</div>
+</main>
+  <script src="script.js"></script>
+
   </body>
 </html>
