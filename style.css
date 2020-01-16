@@ -55,13 +55,14 @@ h3 {
 .main-nav {
   list-style-type: none;
 }
-.nav-links  .logo {
+.nav-links  .logo #winkelwagen{
   text-decoration: none;
 }
 
 /* hier edit ik de plaatsing van het menu */
 .main-nav li {
-  margin: 15px auto;
+  margin: 20px 15px;
+  
 }
 /* de plaatsing van het logo */
 .logo {
@@ -69,6 +70,12 @@ h3 {
   display: flex;
   padding-top: 5px;
 }
+#winkelwagen {
+  margin: auto 90%;
+  float: right;
+  position: absolute;
+}
+
 
 .navbar-toggle {
   position: absolute;
@@ -105,7 +112,7 @@ h3 {
 /* The dropdown container */
 .dropdown {
   float: left;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Dropdown button */
@@ -175,10 +182,58 @@ h3 {
 
 /* alle artikel images mogen er hetzelfde uitzien */
 
+article {
+  position: relative;
+}
 article img {
   width: 90%;
   margin: 5% 5% 0 5%;
   float: center;
+  position: relative;
+}
+/* een marge gegeven zodat niet alles zo dicht op elkaar zit */
+.article-responsive {
+  margin-bottom: 5%;
+}
+/* op de mobile version hoeft er geen search bar */
+.vindbutton {
+  display: none;
+}
+/* hier style ik de plaatsing van de footer */
+footer {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  width: 100%;
+  background-color:#f0efea;
+
+}
+/* hier gaat het om de styling van de tekst in de footer */
+footer li {
+  list-style-type: none;
+  font-size: 14px;
+  font-family: 'Public Sans',Sans-serif;
+  font-weight: 400;
+  margin: 0 5% 5% 5%;
+}
+.titel {
+  font-size: 18px;
+  font-family: 'Public Sans',Sans-serif;
+  font-weight: 700;
+  margin: 5%;
+}
+
+main p {
+  text-align: left;
+margin-right: 5%;
+  font-size: 35px;
+  color: black ;
+  font-family: 'Public Sans',Sans-serif;
+  font-weight: 700;
+
+}
+
+main h2 {
+  margin-top: 5%;
 }
 /* Mobile first, de mediaquerie voor groter dan telefoon */
 @media (min-width: 30em) {
@@ -194,19 +249,65 @@ article img {
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
+    float: left;
+    margin: auto;
+    justify-content: space-around;
 }
 .navbar-toggle {
   display: none;
 
+}
+.nav-links {
+  padding: 0 12px;
 }
 .logo {
   float: left;
   margin: 5%;
 }
 
-/* #overzicht-p {
+.vindbutton {
+  display: flex;
+  z-index: 8;
+  position: absolute;
+  margin: 25% 0 0 40%;
+  
+}
+
+.vindbutton input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 100%;
+  background: #f1f1f1;
+  border-right: none;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.vindbutton button {
+  width: 20%;
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  height: 40px;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.dropdown-content li {
+  display: block;
+}
+#overzicht-p {
   display: none;
-}  */
+} 
+
+/* ik heb lang geprobeerd om de dropdown responsive te maken maar het is niet gelukt */
 /* .dropdown-content {
   display: flex;
   justify-content: space-between;
@@ -228,5 +329,26 @@ hij ook de text in een column ipv eronder */
   width: 25%;
 }
 
+footer {
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+}
+
+#article-grids {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 10vw 40vw;
+
+  
+}
+
+#article-grids li {
+  list-style-type: none;
+  margin-left: 5%;
+  font-weight: 700;
+}
+
+#article-grids p {
+  font-size: 16px;
+  font-weight: 500;
 }
 }
