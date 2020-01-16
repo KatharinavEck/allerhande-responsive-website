@@ -235,6 +235,10 @@ margin-right: 5%;
 main h2 {
   margin-top: 5%;
 }
+
+#article-grids {
+  display: block;
+}
 /* Mobile first, de mediaquerie voor groter dan telefoon */
 @media (min-width: 30em) {
   .navbar {
@@ -307,6 +311,7 @@ main h2 {
   display: none;
 } 
 
+
 /* ik heb lang geprobeerd om de dropdown responsive te maken maar het is niet gelukt */
 /* .dropdown-content {
   display: flex;
@@ -336,7 +341,9 @@ footer {
 #article-grids {
   display: grid;
   grid-template-columns: 50vw 50vw;
-  grid-template-rows: 10vw 40vw;
+  grid-template-rows: 10vw 60vw;
+  width: 100%;
+
 
   
 }
