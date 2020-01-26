@@ -1,4 +1,8 @@
 
+
+/* Alle fotos zijn stock images van https://stock.adobe.com/nl/?gclid=CjwKCAiAjrXxBRAPEiwAiM3DQrCmsprW5GtHp7RUiUwiS0aXzankkIAxzAI_jT-Ly_EBH_icrHNQtBoCsDQQAvD_BwE&as_channel=sem&as_campclass=nonbrand&as_campaign=NL%7CCPRO%7CStock%7CAWAR%7CFree+Stock%7CGG%7C&as_source=google&as_camptype=acquisition&sdid=9MZL4FHM&ef_id=CjwKCAiAjrXxBRAPEiwAiM3DQrCmsprW5GtHp7RUiUwiS0aXzankkIAxzAI_jT-Ly_EBH_icrHNQtBoCsDQQAvD_BwE:G:s&s_kwcid=AL!3085!3!319133279230!e!!g!!free%20stock%20photos */
+/* informatie over flex en grid https://css-tricks.com/snippets/css/a-guide-to-flexbox/ hier vandaan
+gehaald en aangepast */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,7 +18,7 @@ html, body {
 
 /* hier geef ik per h aan welke fonts/kleuren ze precies hebben */
 h1 {
-  font-size: 28px;
+  font-size: 2em;
   font-family: 'Public Sans',Sans-serif;
   font-weight: 700;
   color: #6cbc88;
@@ -22,32 +26,31 @@ h1 {
   margin: 5%;
 }
 h2 {
-  font-size: 20px;
+  font-size: 1.5em;
   font-family: 'Public Sans',Sans-serif;
   font-weight: 500;
   color:black;
   margin: 5% 5%;
-  float: center;
   margin: 2% 5% 2% 5%;
 }
 h3 {
-  font-size: 14px;
+  font-size: 1em;
   font-family: 'Public Sans',Sans-serif;
   font-weight: 400;
   color: black;
   margin: 5% 5%;
-  float: center;
   margin: 0 5% 0 5%;
 }
 
 
 /* hier edit ik de header */
 
-.navbar {
-  border-right: 1px solid #f4f4f4;
-  padding-bottom: 10px;
+header nav {
+  border-right:  solid #f4f4f4;
+  padding-bottom: 0.625em;
   border-bottom: 1px solid #f4f4f4;
   display: grid;
+  width: 100%;
 
 }
 
@@ -55,20 +58,20 @@ h3 {
 .main-nav {
   list-style-type: none;
 }
-.nav-links  .logo #winkelwagen{
+.navbar li .logo #winkelwagen {
   text-decoration: none;
 }
 
 /* hier edit ik de plaatsing van het menu */
 .main-nav li {
-  margin: 20px 15px;
+  margin: 1.25em 0.9em;
   
 }
 /* de plaatsing van het logo */
 .logo {
   margin: 0 auto;
   display: flex;
-  padding-top: 5px;
+  padding-top: 0.3em;
 }
 #winkelwagen {
   margin: auto 90%;
@@ -79,22 +82,24 @@ h3 {
 
 .navbar-toggle {
   position: absolute;
-  top: 10px;
-  left: 15px;
+  top: 0.6em;
+  left: 0.9em;
   cursor: pointer; 
   color: rgba(255,255,255,0.8);
-  font-size: 24px;
+  font-size: 1.5em;
   text-align: left;
 }
 /* navigatie geen bulletpoints */
 .main-nav {
   list-style-type: none;
-  display: none;
+  opacity: 0;
+  height:0;
+  transition: all 0.25s;
 }
 
 .active {
-  display: block;
-}
+opacity: 1;
+height: auto;}
 
 .dropdown-content {
   list-style-type: none;
@@ -116,12 +121,13 @@ h3 {
 }
 
 /* Dropdown button */
+/* code bewerkt van https://www.w3schools.com/css/css_dropdowns.asp */
 .dropbtn {
   float: right;
   border: none;
   outline: none;
   color: #303030;
-  padding: 14px 16px;
+  padding: .9em 1em;
   text-align: center;
   background-color: inherit;
   font-family: inherit;
@@ -135,7 +141,7 @@ h3 {
   display: none;
   position: relative;
   min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
   text-decoration: none;
   grid-template-columns: 50vw 50vw;
 
@@ -143,7 +149,7 @@ h3 {
 
 .dropdown-content li {
   font-family: 'Public Sans' ,Sans-serif ;
-  font-size: 14px;
+  font-size: 0.9em;
   margin: 0;
   background-color:#f0efea;
   width: 100%;
@@ -160,13 +166,14 @@ h3 {
 #allerhandelogoklein {
   width: 50%;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.8em 1em;
   text-decoration: none;
 }
 
 
 
 /* hier ga ik de banner image editten */
+/* code aangepast van https://www.w3schools.com/howto/howto_css_hero_image.asp */
 
 .bannerimage {
   width: 100%;
@@ -188,7 +195,6 @@ article {
 article img {
   width: 90%;
   margin: 5% 5% 0 5%;
-  float: center;
   position: relative;
 }
 /* een marge gegeven zodat niet alles zo dicht op elkaar zit */
@@ -210,13 +216,13 @@ footer {
 /* hier gaat het om de styling van de tekst in de footer */
 footer li {
   list-style-type: none;
-  font-size: 14px;
+  font-size: 0.9em;
   font-family: 'Public Sans',Sans-serif;
   font-weight: 400;
   margin: 0 5% 5% 5%;
 }
-.titel {
-  font-size: 18px;
+footer li:nth-child(1) {
+  font-size: 1.125em;
   font-family: 'Public Sans',Sans-serif;
   font-weight: 700;
   margin: 5%;
@@ -224,8 +230,8 @@ footer li {
 
 main p {
   text-align: left;
-margin-right: 5%;
-  font-size: 35px;
+  margin-right: 5%;
+  font-size: 2.188em;
   color: black ;
   font-family: 'Public Sans',Sans-serif;
   font-weight: 700;
@@ -239,18 +245,28 @@ main h2 {
 #article-grids {
   display: block;
 }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25% 0 25% ;
+}
+
+
 /* Mobile first, de mediaquerie voor groter dan telefoon */
 @media (min-width: 30em) {
   .navbar {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 70px;
+    height: 4.375em;
     align-items: center;
+    width: 100%;
 }
 .main-nav {
     display: flex;
-    margin-right: 30px;
+    margin-right: 1.875em;
     flex-direction: row;
     justify-content: flex-end;
     float: left;
@@ -261,8 +277,8 @@ main h2 {
   display: none;
 
 }
-.nav-links {
-  padding: 0 12px;
+.nav li {
+  padding: 0 0.750em;
 }
 .logo {
   float: left;
@@ -278,13 +294,13 @@ main h2 {
 }
 
 .vindbutton input[type=text] {
-  padding: 10px;
-  font-size: 17px;
+  padding: 0.625em;
+  font-size: 1.1em;
   border: 1px solid grey;
   width: 100%;
   background: #f1f1f1;
   border-right: none;
-  height: 40px;
+  height: 2.5em;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
@@ -292,15 +308,15 @@ main h2 {
 
 .vindbutton button {
   width: 20%;
-  padding: 10px;
+  padding: 0.625em;
   color: white;
-  font-size: 17px;
-  border: 1px solid grey;
+  font-size: 1em;
+  border: 0.01em solid grey;
   border-left: none;
   cursor: pointer;
-  height: 40px;
+  height: 2.5em;
   text-align: center;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 0.3em 0.3em 0;
   cursor: pointer;
 }
 
@@ -355,7 +371,13 @@ footer {
 }
 
 #article-grids p {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25% 0 25% ;
 }
 }
